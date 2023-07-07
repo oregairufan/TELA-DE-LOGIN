@@ -1,0 +1,155 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif, Arial, Helvetica;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:  rgb(34, 33, 33);
+}
+
+.container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-login {
+    width: 400px;
+    position: absolute;
+}
+
+form {
+    width: 100%;
+    padding: 0 50px;
+}
+
+h2 {
+    font-size: 2em;
+    color: lightblue;
+    text-align: center;
+}
+
+.caixa-entrada {
+    position: relative;
+    margin: 25px 0;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #2c4766;
+    outline: none;
+    border-radius: 40px;
+    transition: .5s ease;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: white;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.esqueceu-senha {
+    margin: -15px 0 10px;
+    text-align: center;
+}
+
+.esqueceu-senha a {
+    text-decoration: none;
+    font-size: 0.8em;
+    color: lightgray;
+}
+
+.esqueceu-senha:hover {
+    text-decoration: underline;
+    color: #FFF;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #0ef;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #2c4766;
+    font-weight: 700;
+}
+
+.cadastre-se {
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.cadastre-se a {
+    font-size: 0.8em;
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.cadastre-se a:hover {
+    text-decoration: underline;
+}
+
+span {
+    position: absolute;
+    left: 0;
+    width: 2em;
+    height: 6px;
+    background:#2c4766 ;
+    border-radius: 8px;
+    transform: scale(2.2) rotate(calc(var(--i)*(360deg/50)));
+    transform-origin: 120px;
+    animation: rotacao 3s linear infinite;
+    animation-delay: calc(var(--i)*(3s/50));
+}
+
+    @keyframes rotacao {
+        0% {
+            background:#0ef;
+        }
+        25% {
+            background:#2c4766;
+        }
+        
+    }
+
+    input:focus~label, input:valid~label {
+        top: 1px;
+        font-size: .8em;
+        background: #1f293a;
+        padding: 0 6px;
+        color: #0ef;
+    }
+
+    input:focus, input:valid {
+        border-color: #0ef;
+    }
+
+    input {
+        font-size: 1em;
+        color: #fff;
+        padding: 0 20px;
+    }
